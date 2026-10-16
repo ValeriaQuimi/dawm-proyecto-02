@@ -40,3 +40,8 @@ La estructura definitiva dependerá de los archivos originales de la plantilla y
 
 - Nicole Guevara
 - Valeria Quimí
+## Documentación
+
+La documentación correspondiente al Sprint 1 se encuentra disponible en el siguiente archivo:
+
+- [Reporte del Sprint 1](docs/Reporte_P02_SPRINT1_G14.pdf)
