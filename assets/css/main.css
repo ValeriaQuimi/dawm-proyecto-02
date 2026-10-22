@@ -4319,12 +4319,11 @@ body.is-preload #banner p {
 
 
 
-
 #resultados .inner,
 #formulario .inner {
 	width: 55em;
 	margin: 0 auto;
-	padding: 5em 0 3em 0;
+	padding:1em 0 1em 0;
 	box-sizing: border-box;
 }
 
@@ -4373,16 +4372,6 @@ body.is-preload #banner p {
 		padding: 2em 1.5em 0.1em 1.5em;
 	}
 
-}
-
-#resultados {
-	width: 100%;
-	max-width: none;
-	margin: 30px auto;
-	padding: 80px 20px;
-
-	border-radius: 20px;
-	box-sizing: border-box;
 }
 
 
