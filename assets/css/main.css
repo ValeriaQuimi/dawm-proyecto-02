@@ -191,7 +191,7 @@ html {
 
 body {
 	background-color: #2e3141;
-	
+
 	background-size: contain;
 	background-attachment: fixed,
 		fixed;
@@ -4322,55 +4322,157 @@ body.is-preload #banner p {
 
 #resultados .inner,
 #formulario .inner {
-    width: 55em;
-    margin: 0 auto;
-    padding: 5em 0 3em 0;
-    box-sizing: border-box;
+	width: 55em;
+	margin: 0 auto;
+	padding: 5em 0 3em 0;
+	box-sizing: border-box;
 }
 
 
 #formulario form {
-    width: calc(50% - 1.5em);
-    margin: 0 auto;
-    box-sizing: border-box;
+	width: calc(50% - 1.5em);
+	margin: 0 auto;
+	box-sizing: border-box;
 }
 
 
 @media screen and (max-width: 980px) {
 
-    #resultados .inner,
-    #formulario .inner {
-        padding: 3em 3em 1em 3em;
-        width: 100%;
-        display: block;
-    }
+	#resultados .inner,
+	#formulario .inner {
+		padding: 3em 3em 1em 3em;
+		width: 100%;
+		display: block;
+	}
 
-    #formulario form {
-        width: 100%;
-        margin: 0 0 4em 0;
-    }
+	#formulario form {
+		width: 100%;
+		margin: 0 0 4em 0;
+	}
 
 }
 
 
 @media screen and (max-width: 736px) {
 
-    #resultados .inner,
-    #formulario .inner {
-        padding: 2em 2em 0.1em 2em;
-    }
+	#resultados .inner,
+	#formulario .inner {
+		padding: 2em 2em 0.1em 2em;
+	}
 
-    #formulario form {
-        margin: 0 0 3em 0;
-    }
+	#formulario form {
+		margin: 0 0 3em 0;
+	}
 
 }
 
 @media screen and (max-width: 360px) {
 
-    #resultados .inner,
-    #formulario .inner {
-        padding: 2em 1.5em 0.1em 1.5em;
-    }
+	#resultados .inner,
+	#formulario .inner {
+		padding: 2em 1.5em 0.1em 1.5em;
+	}
 
+}
+
+#resultados {
+	width: 100%;
+	max-width: none;
+	margin: 30px auto;
+	padding: 80px 20px;
+
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+
+
+.contenedor-resultados {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	gap: 50px;
+	flex-wrap: wrap;
+}
+
+.tarjeta-resultado {
+	background-color: white;
+	width: 220px;
+	padding: 25px 15px;
+	border-radius: 15px;
+	box-shadow: 0 4px 10px #00000015;
+	box-sizing: border-box;
+}
+
+.icono {
+	font-size: 35px;
+	text-align: center;
+	display: block;
+
+}
+
+.tarjeta-resultado h3 {
+	color: #71845f;
+	font-size: 40px;
+	margin: 12px 0;
+	text-align: center;
+}
+
+.tarjeta-resultado p {
+	color: #593b25;
+	font-size: 16px;
+	margin: 0;
+	text-align: center;
+}
+
+
+.bloque-grafico {
+	max-width: 750px;
+	margin: 40px auto;
+	padding: 30px;
+	/* background-color:  */
+	border-radius: 15px;
+	box-shadow: 0 4px 10px #00000015;
+	box-sizing: border-box;
+}
+
+.resultado-item {
+	display: block;
+	padding: 16px 0;
+	border-bottom: 1px solid #e5ded4;
+}
+
+.barra-fondo {
+	width: 100%;
+	height: 18px;
+	background-color: #e8e2d8;
+	border-radius: 20px;
+	overflow: hidden;
+
+}
+
+.barra-progreso {
+	height: 100%;
+	background-color: #71845f;
+	border-radius: 20px;
+	transition: width 0.5s ease;
+}
+
+.detalle-resultado {
+	color: white;
+	font-size: 0.9rem;
+	margin: 8px 0 0;
+}
+
+.resultado-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.resultado-info strong {
+	color: white;
+	font-size: 1.1rem;
 }
