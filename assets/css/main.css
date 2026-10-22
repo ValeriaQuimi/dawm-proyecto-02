@@ -4319,3 +4319,58 @@ body.is-preload #banner p {
 
 
 
+
+#resultados .inner,
+#formulario .inner {
+    width: 55em;
+    margin: 0 auto;
+    padding: 5em 0 3em 0;
+    box-sizing: border-box;
+}
+
+
+#formulario form {
+    width: calc(50% - 1.5em);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 980px) {
+
+    #resultados .inner,
+    #formulario .inner {
+        padding: 3em 3em 1em 3em;
+        width: 100%;
+        display: block;
+    }
+
+    #formulario form {
+        width: 100%;
+        margin: 0 0 4em 0;
+    }
+
+}
+
+
+@media screen and (max-width: 736px) {
+
+    #resultados .inner,
+    #formulario .inner {
+        padding: 2em 2em 0.1em 2em;
+    }
+
+    #formulario form {
+        margin: 0 0 3em 0;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    #resultados .inner,
+    #formulario .inner {
+        padding: 2em 1.5em 0.1em 1.5em;
+    }
+
+}
