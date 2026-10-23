@@ -1,4 +1,3 @@
-/* Paleta cacao y terracota suave — overrides para Solid State.*/
 :root {
   --cacao-oscuro: #38251F;
   --chocolate: #58392D;
@@ -64,7 +63,7 @@ body { background-color: var(--cacao-oscuro); }
   box-shadow: inset 0 -1px 0 0 #74503B, 0 1px 0 0 #74503B;
 }
 /* Encuesta, formulario y pie de página */
-#resultados { background-color: #684535; }
+#resultados { background-color: #805640; }
 #formulario { background-color: #74503B; }
 #footer {
   background-color: var(--cacao-oscuro);
@@ -81,18 +80,9 @@ textarea:focus, select:focus { border-color: var(--canela); }
 input[type="submit"], input[type="button"], button { background-color: var(--terracota); }
 input[type="submit"]:hover, input[type="button"]:hover, button:hover { background-color: var(--canela); }
 
-/* Tarjetas de las exposiciones */
-#espacios-museo .features article {
-  background-color: #754F3E;
-}
-#espacios-museo .features article h3,
-#espacios-museo .features article p {
-  color: #ffffff;
-}
-
-/* Unión entre las exposiciones y los resultados */
+/* Tarjetas de las exposiciones: colores y diagonal */
 #espacios-museo::after {
-  background-color: #684535;
+    background-color: #684535;
 }
 
 /* Fotografías de las secciones informativas */
@@ -125,52 +115,194 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover { backgroun
   }
 }
 
-
-
-.recorrido {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px;
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
+/* Galería Vive la experiencia */
+#experiencia .recorrido {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto 35px;
 }
 
-.etapa {
-  min-width: 0;
+#experiencia .etapa {
+    min-width: 0;
+    background-color: #754F3E;
+    border-radius: 0;
+    overflow: hidden;
+    text-align: center;
 }
 
-.etapa img {
-  display: block;
-  width: 100%;
-  height: clamp(220px, 28vw, 400px);
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
+#experiencia .etapa img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
 }
 
-/* Tablets */
-@media screen and (max-width: 980px) {
-  .recorrido {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-  }
-
-  .etapa img {
-    height: 280px;
-  }
+#experiencia .etapa h3 {
+    margin: 0;
+    padding: 12px 10px;
+    color: #ffffff;
+    font-size: 0.9em;
 }
 
-/* Celulares */
-@media screen and (max-width: 600px) {
-  .recorrido {
+#experiencia .experiencia-subtitulo {
+    background-color: #58392D;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 20px;
+    margin: 35px 0 25px;
+    border-bottom: 3px solid #B98768;
+    border-radius: 0;
+    font-size: 1.1em;
+}
+
+/* Transición entre experiencia y resultados */
+#experiencia { margin-bottom: 0; }
+#experiencia::after { background-color: #805640; }
+#resultados {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 4.5em;
+}
+#resultados::before,
+#resultados::after { display: none; }
+
+/* Espacio entre el formulario y el footer */
+#formulario { margin-top: 0; margin-bottom: 0; }
+#formulario::before,
+#formulario::after { display: none; }
+#footer { margin-top: 0; padding-top: 0; }
+#footer .inner { padding-top: 2.5em; }
+
+/* Tarjetas de ¿Qué podemos encontrar? */
+#espacios-museo .features {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
+    gap: 30px;
+}
 
-  .etapa img {
-    height: auto;
-    aspect-ratio: 4 / 3;
-  }
+#espacios-museo .features article {
+    display: grid;
+    grid-template-columns: 50% minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    width: 100%;
+    min-height: 280px;
+    margin: 0;
+    padding: 0;
+    background-color: #754F3E;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#espacios-museo .features article .image {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 280px;
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+    overflow: hidden;
+}
+
+#espacios-museo .features article .image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+#espacios-museo .features article h3.major {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 1.5em;
+    padding: 1.5em 0 1em;
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.125);
+}
+
+#espacios-museo .features article p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    padding: 1em 1.5em 1.5em;
+    color: #ffffff;
+}
+
+/* Menú de navegación */
+#menu .inner { width: 24em; padding: 1.5em 2em 1em; }
+#menu .links { margin-bottom: 0.5em; }
+#menu .links li a { padding: 0.45em 0; line-height: 1.5; }
+
+/* Adaptación a pantallas medianas */
+@media screen and (max-width: 980px) {
+    #experiencia .recorrido {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+    #experiencia .etapa img { height: 280px; }
+    #resultados { padding-top: 4.75em; }
+}
+
+/* Tipos de cacao: una columna al dividir la pantalla */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    #experiencia .tipos-cacao {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    #experiencia .tipos-cacao .etapa img {
+        height: 350px;
+        object-fit: cover;
+    }
+}
+
+/* Adaptación a móviles */
+@media screen and (max-width: 736px) {
+    #resultados { padding-top: 2.5em; }
+
+    #espacios-museo .features article {
+        display: block;
+        min-height: 0;
+    }
+    #espacios-museo .features article .image {
+        width: 100%;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+        border-radius: 5px 5px 0 0;
+    }
+    #espacios-museo .features article .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #espacios-museo .features article h3.major {
+        margin: 0 1.5em;
+        padding: 1.5em 0 1em;
+    }
+    #espacios-museo .features article p {
+        padding: 1em 1.5em 1.5em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #experiencia .recorrido {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    #experiencia .etapa img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #menu .inner {
+        width: calc(100% - 2em);
+        padding: 1.5em;
+    }
 }
