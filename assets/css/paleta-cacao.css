@@ -1,0 +1,126 @@
+/* Paleta cacao y terracota suave — overrides para Solid State.*/
+:root {
+  --cacao-oscuro: #38251F;
+  --chocolate: #58392D;
+  --terracota: #936047;
+  --canela: #B98768;
+  --crema: #EFE0CB;
+}
+
+body { background-color: var(--cacao-oscuro); }
+#header, #header.alt { background-color: rgba(56,37,31,.96); }
+#menu { background: rgba(36,22,17,.82); }
+#menu .inner { background: var(--chocolate); }
+#menu .links li a:hover { background: var(--terracota); }
+
+/* Mantener la foto del banner y aplicar filtro marrón en todos los tamaños */
+#banner, #wrapper > header {
+  background-color: var(--cacao-oscuro);
+  background-image: linear-gradient(rgba(44,25,18,.50), rgba(44,25,18,.68)), url('../../images/fondo_museo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#header nav a[href="#menu"]:hover { background-color: rgba(185,135,104,.18); }
+
+/* Fondos y diagonales de las secciones */
+.wrapper { background-color: #38251F; }
+.wrapper:before, .wrapper:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20points%3D%220%2C100%20100%2C0%20100%2C100%22%20fill%3D%22%2338251F%22%2F%3E%3C%2Fsvg%3E");
+  box-shadow: inset 0 -1px 0 0 #38251F, 0 1px 0 0 #38251F;
+}
+.wrapper.style1 { background-color: #58392D; }
+.wrapper.style1:before, .wrapper.style1:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20points%3D%220%2C100%20100%2C0%20100%2C100%22%20fill%3D%22%2358392D%22%2F%3E%3C%2Fsvg%3E");
+  box-shadow: inset 0 -1px 0 0 #58392D, 0 1px 0 0 #58392D;
+}
+.wrapper.style2 { background-color: #684535; }
+.wrapper.style2:before, .wrapper.style2:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20points%3D%220%2C100%20100%2C0%20100%2C100%22%20fill%3D%22%23684535%22%2F%3E%3C%2Fsvg%3E");
+  box-shadow: inset 0 -1px 0 0 #684535, 0 1px 0 0 #684535;
+}
+.wrapper.style3 { background-color: #74503B; }
+.wrapper.style3:before, .wrapper.style3:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20points%3D%220%2C100%20100%2C0%20100%2C100%22%20fill%3D%22%2374503B%22%2F%3E%3C%2Fsvg%3E");
+  box-shadow: inset 0 -1px 0 0 #74503B, 0 1px 0 0 #74503B;
+}
+.wrapper.spotlight { background-color: #58392D; }
+.wrapper.spotlight:before, .wrapper.spotlight:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20points%3D%220%2C100%20100%2C0%20100%2C100%22%20fill%3D%22%2358392D%22%2F%3E%3C%2Fsvg%3E");
+  box-shadow: inset 0 -1px 0 0 #58392D, 0 1px 0 0 #58392D;
+}
+.wrapper.spotlight.style1 { background-color: #58392D; }
+.wrapper.spotlight.style1:before, .wrapper.spotlight.style1:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20points%3D%220%2C100%20100%2C0%20100%2C100%22%20fill%3D%22%2358392D%22%2F%3E%3C%2Fsvg%3E");
+  box-shadow: inset 0 -1px 0 0 #58392D, 0 1px 0 0 #58392D;
+}
+.wrapper.spotlight.style2 { background-color: #684535; }
+.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20points%3D%220%2C100%20100%2C0%20100%2C100%22%20fill%3D%22%23684535%22%2F%3E%3C%2Fsvg%3E");
+  box-shadow: inset 0 -1px 0 0 #684535, 0 1px 0 0 #684535;
+}
+.wrapper.spotlight.style3 { background-color: #74503B; }
+.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20points%3D%220%2C100%20100%2C0%20100%2C100%22%20fill%3D%22%2374503B%22%2F%3E%3C%2Fsvg%3E");
+  box-shadow: inset 0 -1px 0 0 #74503B, 0 1px 0 0 #74503B;
+}
+/* Encuesta, formulario y pie de página */
+#resultados { background-color: #684535; }
+#formulario { background-color: #74503B; }
+#footer {
+  background-color: var(--cacao-oscuro);
+  background-image: none;
+}
+.tarjeta-resultado { background-color: #FAF3E9; }
+.tarjeta-resultado h3, .tarjeta-resultado p { color: var(--chocolate); }
+.bloque-grafico { background-color: rgba(255,255,255,.07); }
+.barra-progreso { background-color: var(--canela); }
+.barra-fondo { background-color: #D9C5B1; }
+.linea-seccion { background-color: var(--canela); }
+input[type="text"]:focus, input[type="email"]:focus,
+textarea:focus, select:focus { border-color: var(--canela); }
+input[type="submit"], input[type="button"], button { background-color: var(--terracota); }
+input[type="submit"]:hover, input[type="button"]:hover, button:hover { background-color: var(--canela); }
+
+/* Tarjetas de las exposiciones */
+#espacios-museo .features article {
+  background-color: #754F3E;
+}
+#espacios-museo .features article h3,
+#espacios-museo .features article p {
+  color: #ffffff;
+}
+
+/* Unión entre las exposiciones y los resultados */
+#espacios-museo::after {
+  background-color: #684535;
+}
+
+/* Fotografías de las secciones informativas */
+.wrapper.spotlight .image {
+  width: 350px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wrapper.spotlight .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 736px) {
+  .wrapper.spotlight .image {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* Portada en pantallas anchas */
+@media screen and (min-width: 1281px) {
+  #banner {
+    padding-bottom: 8.25em;
+    margin-bottom: -6.5em;
+  }
+}
