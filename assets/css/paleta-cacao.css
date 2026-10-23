@@ -124,3 +124,53 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover { backgroun
     margin-bottom: -6.5em;
   }
 }
+
+
+
+.recorrido {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.etapa {
+  min-width: 0;
+}
+
+.etapa img {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 28vw, 400px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+/* Tablets */
+@media screen and (max-width: 980px) {
+  .recorrido {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .etapa img {
+    height: 280px;
+  }
+}
+
+/* Celulares */
+@media screen and (max-width: 600px) {
+  .recorrido {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .etapa img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+}
