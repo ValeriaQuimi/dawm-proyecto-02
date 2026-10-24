@@ -306,3 +306,19 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover { backgroun
         padding: 1.5em;
     }
 }
+
+
+
+#experiencia .etapa h3.major {
+    display: table;
+    width: auto;
+    max-width: calc(100% - 20px);
+    margin: 12px auto 0;
+    padding: 8px 0;
+    text-align: center;
+}
+
+#experiencia .etapa p {
+    margin: 12px 15px 20px;
+    line-height: 1.6;
+}
