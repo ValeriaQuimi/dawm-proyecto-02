@@ -322,3 +322,193 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover { backgroun
     margin: 12px 15px 20px;
     line-height: 1.6;
 }
+
+/* Videos de Vive la experiencia */
+#experiencia .video-museo {
+    display: grid;
+    align-items: stretch;
+    background-color: #754F3E;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#experiencia .video-texto {
+    padding: 28px;
+    align-self: center;
+}
+
+#experiencia .video-texto h3,
+#experiencia .video-texto p {
+    color: #ffffff;
+}
+
+#experiencia .video-texto p {
+    margin-bottom: 0;
+}
+
+#experiencia .video-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #38251F;
+}
+
+#experiencia .video-contenedor video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Video de Tipos de cacao */
+#experiencia .video-museo:not(.video-arte) {
+    grid-template-columns: minmax(0, 1fr) 250px;
+    max-width: 950px;
+    margin: 0 auto 30px;
+}
+
+#experiencia .video-museo:not(.video-arte) .video-contenedor {
+    height: 350px;
+}
+
+/* Video cuadrado de Arte en el museo */
+#experiencia .video-arte {
+    grid-template-columns: minmax(0, 1fr) 350px;
+    max-width: 850px;
+    margin: 0 auto 30px;
+}
+
+#experiencia .video-arte .video-texto {
+    padding: 25px;
+}
+
+#experiencia .video-arte .video-contenedor {
+    height: 350px;
+}
+
+/* Carrusel circular de Conoce las salas */
+#experiencia .carrusel-contenedor {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#experiencia .carrusel-salas {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: visible;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+    touch-action: pan-y;
+    cursor: grab;
+    user-select: none;
+    transition: transform 0.5s ease;
+}
+
+#experiencia .carrusel-salas.arrastrando {
+    cursor: grabbing;
+    transition: none;
+}
+
+#experiencia .carrusel-salas .etapa {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 0;
+    scroll-snap-align: none;
+}
+
+#experiencia .carrusel-salas img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#experiencia .flecha-carrusel {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: rgba(56, 37, 31, 0.35);
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#experiencia .flecha-carrusel:hover {
+    background: rgba(56, 37, 31, 0.75);
+}
+
+#experiencia .flecha-anterior { left: 10px; }
+#experiencia .flecha-siguiente { right: 10px; }
+
+/* Videos y carrusel en pantallas medianas */
+@media screen and (max-width: 980px) {
+    #experiencia .video-museo:not(.video-arte),
+    #experiencia .video-arte {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 450px;
+    }
+
+    #experiencia .video-contenedor {
+        grid-row: 1;
+        width: 100%;
+    }
+
+    #experiencia .video-museo:not(.video-arte) .video-contenedor {
+        height: 350px;
+    }
+
+    #experiencia .video-arte .video-contenedor {
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    #experiencia .video-texto {
+        padding: 25px;
+    }
+
+    #experiencia .carrusel-salas .etapa {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+/* Carrusel y separación de secciones en celulares */
+@media screen and (max-width: 736px) {
+    #experiencia {
+        padding-bottom: 4em;
+    }
+
+    #resultados {
+        margin-top: 0;
+        padding-top: 3em;
+    }
+
+    /* Acercamiento leve para reducir bordes incorporados en el video */
+    #experiencia .video-arte .video-contenedor video {
+        transform: scale(1.08);
+        transform-origin: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #experiencia .carrusel-salas .etapa {
+        flex-basis: 100%;
+    }
+
+    #experiencia .flecha-carrusel {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+}
